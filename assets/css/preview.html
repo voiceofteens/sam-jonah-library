@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sam Jonah Library | Knowledge Commons Reservation</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="student.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="#" class="navbar-brand">
+      <span>Sam Jonah Library</span>
+      <span class="highlight">Knowledge Commons</span>
+    </a>
+    <div style="display: flex; gap: 1rem; align-items: center;">
+      <span style="font-size: 0.9rem; color: var(--text-muted);">Student Portal</span>
+      <a href="#seat-map" class="btn btn-primary">Quick Book</a>
+    </div>
+  </nav>
+
+  <main class="dashboard-container">
+    <header class="dashboard-header">
+      <div class="dashboard-title">
+        <h1>Reserve Your Study Space</h1>
+        <p>Real-time seat and discussion room availability at the Knowledge Commons.</p>
+      </div>
+      <div>
+        <span class="badge badge-available">● Live System Active</span>
+      </div>
+    </header>
+
+    <section class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-label">Available Seats</span>
+        <span class="stat-value">42 / 60</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Discussion Rooms Open</span>
+        <span class="stat-value">3 / 5</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Your Active Bookings</span>
+        <span class="stat-value">1</span>
+      </div>
+    </section>
+
+    <h2 style="margin-bottom: 1.25rem;">Discussion Rooms</h2>
+    <section class="spaces-grid">
+      <article class="room-card">
+        <div>
+          <div class="room-card-header">
+            <h3 class="room-card-title">Learners' Room A</h3>
+            <span class="badge badge-available">Available</span>
+          </div>
+          <div class="room-meta">
+            <span>Capacity: 6 Students</span>
+            <span>•</span>
+            <span>Ground Floor</span>
+          </div>
+          <div class="room-amenities">
+            <span class="amenity-tag">Smart Display</span>
+            <span class="amenity-tag">Whiteboard</span>
+            <span class="amenity-tag">Power Outlets</span>
+          </div>
+        </div>
+        <button class="btn btn-primary" style="width: 100%;">Reserve Room</button>
+      </article>
+
+      <article class="room-card">
+        <div>
+          <div class="room-card-header">
+            <h3 class="room-card-title">Learners' Room B</h3>
+            <span class="badge badge-occupied">Occupied</span>
+          </div>
+          <div class="room-meta">
+            <span>Capacity: 8 Students</span>
+            <span>•</span>
+            <span>Ground Floor</span>
+          </div>
+          <div class="room-amenities">
+            <span class="amenity-tag">Projector</span>
+            <span class="amenity-tag">Acoustic Glass</span>
+            <span class="amenity-tag">High-Speed Wi-Fi</span>
+          </div>
+        </div>
+        <button class="btn btn-outline" style="width: 100%;" disabled>Available at 4:00 PM</button>
+      </article>
+    </section>
+
+    <section id="seat-map" class="seat-map-wrapper">
+      <h2 style="margin-bottom: 0.5rem;">Interactive Quiet Study Seat Map</h2>
+      <p style="color: var(--text-muted); margin-bottom: 1.25rem; font-size: 0.9rem;">Click an available workstation to select your spot.</p>
+      
+      <div class="seat-legend">
+        <div class="legend-item">
+          <span class="legend-dot" style="background: var(--bg-surface-elevated); border: 1px solid var(--border-subtle);"></span>
+          <span>Available</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background: var(--accent-primary);"></span>
+          <span>Selected</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot" style="background: rgba(244, 63, 94, 0.25);"></span>
+          <span>Occupied</span>
+        </div>
+      </div>
+
+      <div class="seat-grid">
+        <div class="seat-node available">KC-01</div>
+        <div class="seat-node occupied">KC-02</div>
+        <div class="seat-node available">KC-03</div>
+        <div class="seat-node selected">KC-04</div>
+        <div class="seat-node available">KC-05</div>
+        <div class="seat-node available">KC-06</div>
+        <div class="seat-node occupied">KC-07</div>
+        <div class="seat-node available">KC-08</div>
+        <div class="seat-node available">KC-09</div>
+        <div class="seat-node occupied">KC-10</div>
+        <div class="seat-node available">KC-11</div>
+        <div class="seat-node available">KC-12</div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
