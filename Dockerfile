@@ -13,6 +13,7 @@ RUN sed -ri 's/Listen 80/Listen ${PORT}/' /etc/apache2/ports.conf \
 
 # Use Ghana time (UTC+0) for PHP date functions
 RUN echo "date.timezone=Africa/Accra" > /usr/local/etc/php/conf.d/timezone.ini
+RUN echo output_buffering=4096 > /usr/local/etc/php/conf.d/buffer.ini
 
 COPY . /var/www/html/
 RUN chown -R www-data:www-data /var/www/html
